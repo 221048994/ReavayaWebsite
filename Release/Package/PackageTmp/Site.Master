@@ -1,0 +1,250 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="ReaVaya_Bus_System.Site" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Rea Vaya</title>
+
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
+
+  <!-- font awesome style -->
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+  <!-- nice select -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha256-mLBIhmBvigTFWPSCtvdu6a76T+3Xyt+K571hupeFLg4=" crossorigin="anonymous" />
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+   <style>
+       .hero_area {
+           height: 100px;
+       }
+   </style> 
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="hero_area" style="height:100px">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+          
+        <!-- normal navigation -->
+        <nav class="navbar navbar-expand-lg custom_nav-container " id="normalNav" runat="server" visible="true">
+          <a class="navbar-brand" href="Home.aspx">
+            <span>
+              Rea Vaya
+            </span>
+          </a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class=""> </span>
+          </button>
+
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav  ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="Home.aspx">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Login.aspx">
+                  <i class="fa fa-user" aria-hidden="true"></i>
+                  <span>
+				  Login
+                  </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Registration.aspx">
+                  <i class="fa fa-user" aria-hidden="true"></i>
+                  <span>
+                    Sign Up
+                  </span>
+                </a>
+              </li>
+              <form class="form-inline">
+                <button class="btn   nav_search-btn" type="submit">
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+              </form>
+            </ul>
+          </div>
+           
+        </nav>
+           <!-- end of normal navigation -->
+
+          <!-- admin navigation -->
+          <nav class="navbar navbar-expand-lg custom_nav-container" id="adminNav" runat="server" visible="false">
+               <a class="navbar-brand" href="Home.aspx">
+            <span>
+              Rea Vaya
+            </span>
+          </a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class=""> </span>
+          </button>
+              
+            <div class="collapse navbar-collapse">
+            <ul class="navbar-nav  ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="Home.aspx">Dashboard</a>
+              </li>
+                
+              <li class="nav-item" >
+                  <a href="EmergencyNotification.aspx">
+               <color="red"> <i class="fa fa-bell" ></i></color>
+                  <asp:Label ID="notificationCount" runat="server" ForeColor="#FF3300"></asp:Label>
+                      </a>
+              </li>
+			  <li class="nav-item">
+                <a class="nav-link" href="NoticeAdmin.aspx">Add Notices</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="ProfileManagement.aspx">
+                  <i class="fa fa-user" aria-hidden="true"></i>
+                  <span id="adminName" runat="server">
+                    <!-- the actual user userName -->
+                  </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link">
+                      <asp:Button CssClass="btn" BackColor="White" ID="btn_Admin" runat="server" Text="LOGOUT" OnClick="btn_Admin_Click"/>
+                  </a>
+              </li>
+            </ul>
+          </div>
+            
+          </nav>
+          <!-- end of admin navigation -->
+
+          <!-- driver navigation -->
+          <nav class="navbar navbar-expand-lg custom_nav-container" id="driverNav" runat="server" visible="false">
+              <a class="navbar-brand" href="Home.aspx">
+            <span>
+              Rea Vaya
+            </span>
+          </a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class=""> </span>
+          </button>
+
+               
+            <div class="collapse navbar-collapse">
+            <ul class="navbar-nav  ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="Home.aspx">Home</a>
+              </li>
+			  <li class="nav-item">
+			   <a class="nav-link" href="Schedule.aspx">Check Schedule</a>
+              </li>
+			  <li class="nav-item">
+                <a class="nav-link" href="Emergency.aspx">Log Emergency</a>
+              </li>
+			  <li class="nav-item">
+                <a class="nav-link" href="Alert.aspx">Log Alert</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="ProfileManagement.aspx">
+                  <i class="fa fa-user" aria-hidden="true"></i>
+                  <span id="driverName" runat="server">
+                    <!-- the actual user userName -->
+                  </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link">
+                      <asp:Button CssClass="btn" BackColor="White" ID="btn_Driver" runat="server" Text="LOGOUT" OnClick="btn_Driver_Click"/>
+                  </a>
+              </li>
+            </ul>
+          </div>
+            
+          </nav>
+          <!-- end of driver navigation -->
+
+          <!-- commuter navigation -->
+          <nav class="navbar navbar-expand-lg custom_nav-container" id="commuterNav" runat="server" visible="false">
+              <a class="navbar-brand" href="Home.aspx">
+            <span>
+              Rea Vaya
+            </span>
+          </a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class=""> </span>
+          </button>
+
+            <div class="collapse navbar-collapse">
+            <ul class="navbar-nav  ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="Home.aspx">Home</a>
+              </li>
+			  <li class="nav-item">
+			   <a class="nav-link" href="Pricing.aspx">Calculate Price</a>
+              </li>
+			  <li class="nav-item">
+                <a class="nav-link" href="Notice.aspx">Notices</a>
+              </li>
+			  <li class="nav-item">
+                <a class="nav-link" href="TrackBus.aspx">Track Bus</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="ProfileManagement.aspx">
+                  <i class="fa fa-user" aria-hidden="true"></i>
+                  <span id="username" runat="server">
+                    <!-- the actual user userName -->
+                  </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link">
+                      <asp:Button CssClass="btn" BackColor="White" ID="btn_Logout" runat="server" Text="LOGOUT" OnClick="btn_Logout_Click"/>
+                  </a>
+              </li> 
+                
+            </ul>
+          </div>
+           
+          </nav>
+           <!-- end of commuter navigation -->
+      </div>
+    </header>
+    <!-- end header section -->
+    
+  </div>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+  <!-- jQery -->
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <!-- bootstrap js -->
+  <script src="js/bootstrap.js"></script>
+  <!-- nice select -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js" integrity="sha256-Zr3vByTlMGQhvMfgkQ5BtWRSKBGa2QlspKYJnkjZTmo=" crossorigin="anonymous"></script>
+  <!-- custom js -->
+  <script src="js/custom.js"></script>
+
+    </form>
+</body>
+</html>
