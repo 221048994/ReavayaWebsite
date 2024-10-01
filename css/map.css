@@ -1,0 +1,123 @@
+﻿/* Existing CSS styles remain unchanged */
+
+.container2 {
+    width: 90%; /* Adjust the width as desired */
+    margin: 0 auto; /* Center the container horizontally */
+}
+
+.mapContainer {
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+    padding: 20px;
+}
+
+#map {
+    height: 500px;
+    flex: 1;
+    max-width: 900px; /* Adjust based on your requirement */
+}
+
+#input-container {
+    width: 25%;
+    flex: 1;
+    max-width: 300px; /* Adjust based on your requirement */
+    margin-right: 20px; /* Space between input and map */
+}
+
+    #input-container div {
+        margin-bottom: 10px;
+    }
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+select,
+button {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+#price-container {
+    margin-top: -210px;
+    width: 25%; /* Adjusted width to match the input container */
+    border: 2px solid #ccc; /* Add border */
+    border-radius: 10px; /* Add border radius */
+    padding: 10px; /* Add padding */
+}
+
+#price-list {
+    list-style-type: none;
+    padding: 0;
+    width: 100%; /* Fill the container */
+    margin-top: 10px; /* Adjusted margin for spacing */
+}
+
+    #price-list li {
+        margin-bottom: 5px;
+    }
+
+/* Add CSS to align list view with the map */
+#price-list {
+    width: 100%; /* Fill the container */
+}
+
+/* Add styling for list view items */
+.list-item {
+    border: 1px solid #ccc; /* Add border */
+    border-radius: 5px; /* Add border radius */
+    padding: 8px; /* Add padding */
+    margin-bottom: 5px; /* Add margin */
+}
+
+/* Existing CSS styles remain unchanged */
+
+/* Add CSS to make prices red and other texts blue */
+#price-list li {
+    color: blue; /* Set color to blue for other texts */
+}
+
+    #price-list li:nth-child(odd) {
+        color: red; /* Set color to red for prices */
+    }
+
+h1,
+#input-container label,
+#input-container option {
+    color: blue; /* Set color to blue for labels and options */
+}
+
+/* Adjust the alignment of the purchase ticket button */
+#purchase-container {
+    width: 25%; /* Same width as the input container */
+    max-width: 300px; /* Adjust based on your requirement */
+    margin-right: 20px; /* Same margin as the input container */
+    margin-top: 20px; /* Adjust based on your requirement */
+}
+
+#purchase {
+    width: 100%;
+    padding: 8px;
+    background-color: #007bff;
+    color: #fff;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+    #purchase:hover {
+        background-color: #0056b3;
+    }

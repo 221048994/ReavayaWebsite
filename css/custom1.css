@@ -1,0 +1,58 @@
+﻿body {
+    background: linear-gradient(120deg, #3498db, #8e44ad);
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn2 {
+    background-color: green;
+    border-radius: 8px;
+    width: 180px;
+    height: 40px;
+}
+
+.form1 {
+    width: 100%;
+}
+
+.register-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    width: 60vw; /* Slightly smaller width */
+    max-width: 1400px; /* Ensure maximum width */
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.register-title {
+    color: #333;
+    font-weight: bold;
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.form-control {
+    width: 100%;
+}
+
+.btn-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.signup-link {
+    text-align: center;
+}
